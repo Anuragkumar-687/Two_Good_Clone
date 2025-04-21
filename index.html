@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="responsive.css">
 
 </head>
 
@@ -77,10 +79,10 @@
         </div>
         <div id="nav-part2">
             <div id="links">
-                <a href="#" class="hover-line">Shop</a>
-                <a href="#" class="hover-line">Wholesale</a>
-                <a href="#" class="hover-line">Catering</a>
-                <a href="#" class="hover-line">Donate</a>
+                <a class="hover-line">Shop</a>
+                <a class="hover-line">Wholesale</a>
+                <a class="hover-line">Catering</a>
+                <a class="hover-line">Donate</a>
             </div>
             <div id="icons">
                 <i class="ri-menu-fill" id="menu"></i>
@@ -104,27 +106,58 @@
 
 
                 <div class="marquee-wrapper">
-                    <h1 style="color: white; text-align: center ;">Your Cart is empty.</h1>
+                    <h1 style="color: white; text-align: center;">Your Cart is empty.</h1>
+
                     <div class="marquee-container">
                         <hr id="carthr">
                         <div class="marquee marquee1">
-                            <span>CART CART CART CART CART CART CART CART CART</span>
-                            <span>CART CART CART CART CART CART CART CART CART</span>
-                            <span>CART CART CART CART CART CART CART CART CART</span>
-                            <span>CART CART CART CART CART CART CART CART CART</span>
-                        </div>
-                    </div>
-                    <hr id="carthr">
-                    <div class="marquee-container">
-                        <div class="marquee marquee2">
-                            <span>EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY</span>
-                            <span>EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY</span>
-                            <span>EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY</span>
-                            <span>EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY EMPTY</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <!-- DUPLICATE -->
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
+                            <span>CART</span>
                         </div>
                     </div>
 
+                    <hr id="carthr">
+
+                    <div class="marquee-container">
+                        <div class="marquee marquee2">
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <!-- DUPLICATE -->
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                            <span>EMPTY</span>
+                        </div>
+                    </div>
                 </div>
+
+
+
             </div>
         </div>
     </div>
@@ -139,10 +172,12 @@
                 <h1 style='color:#F7F7F7;'>.</h1>
                 <h1>COURSE</h1>
             </div>
+            <div>
 
-            <div id="img-container">
-                <img data-scroll data-scroll-speed="1"
-                    src="https://cdn.sanity.io/images/w8f1ak3c/production/b183ed175d0b3aa67ecef72cfb4d146cd5fc9b2e-1500x1000.jpg/Teaser%20-%20A7R00739_DexterKim.jpg?rect=0,93,1500,814&w=1280&h=695&fit=min&auto=format"></img>
+                <div id="img-container">
+                    <img data-scroll data-scroll-speed="1"
+                        src="https://cdn.sanity.io/images/w8f1ak3c/production/b183ed175d0b3aa67ecef72cfb4d146cd5fc9b2e-1500x1000.jpg/Teaser%20-%20A7R00739_DexterKim.jpg?rect=0,93,1500,814&w=1280&h=695&fit=min&auto=format"></img>
+                </div>
             </div>
         </div>
         <div class="good">
@@ -156,10 +191,24 @@
                     src="https://cdn.sanity.io/images/w8f1ak3c/production/3639fc290272fe62d269e8750eff907b2664fc77-3000x5000.png/1.png?w=1600&h=2667&auto=format"
                     alt="">
                 <div data-scroll data-scroll-speed="-2" class="dets" id="dets1">
-                    <p>⚫️</p>
-                    <p id='shop'>SHOP
-                    <p id="details">GIFTS FOR GOOD
-                    <p> > </p>
+                    <i class="ri-circle-fill"></i>
+                    <p>SHOP
+                    <p>GIFTS FOR GOOD
+                        <i class="ri-arrow-right-s-line"></i>
+                        <div class="container" style="background-color: #B4D5B6;">
+                            <div class="listing">
+                                <div class="list-elem">
+                                    <img src="https://cdn.sanity.io/images/w8f1ak3c/production/7a2007de38624a0b2935416bf51a4584889aa232-5000x5000.png/Website%20Products%20(12).png?w=320&h=320&auto=format"
+                                        alt="">
+                                    <p>TWO GOOD TOTE BAG</p>
+                                </div>
+                                <div class="list-elem">
+                                    <img src="https://cdn.sanity.io/images/w8f1ak3c/production/7d180ca25ade6277a215b634318056d551de9da8-5000x5000.png/Website%20Products%20(5).png?w=320&h=320&auto=format"
+                                        alt="">
+                                    <p>TWO GOOD CO. HOODIE</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
 
 
@@ -170,10 +219,25 @@
                     https://cdn.sanity.io/images/w8f1ak3c/production/9b0a45cc68406b9288b970064c64511ce937d911-5000x5000.png/Website%20Products%20-%20Alemais%202024.png?rect=1000,0,3000,5000&w=1600&h=2667&fit=min&auto=format"
                     alt="">
                 <div data-scroll data-scroll-speed="-2" class="dets" id="dets2">
-                    <p>⚫️</p>
-                    <p id='shop'>SHOP
-                    <p id="details">ALÉMAIS
-                    <p> > </p>
+                    <i class="ri-circle-fill"></i>
+                    <p>SHOP
+                    <p>ALÉMAIS
+                        <i class="ri-arrow-right-s-line"></i>
+                    <div class="container">
+                        <div class="listing">
+                            <div class="list-elem">
+                                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/ff380ebfee344ff98d24d4156ded6b9dc22a2a2a-5000x5000.png/Change-The-Course-Cookbook-Two-Good-Co.png?w=320&h=320&auto=format"
+                                    alt="">
+                                <p>CHANGE THE COURSE COOKBOOK</p>
+                            </div>
+                            <div class="list-elem">
+                                <img id="duobook"
+                                    src="https://cdn.sanity.io/images/w8f1ak3c/production/4206e9c3f7ab098369c39a2194b82eeca6bb0664-6166x4111.png/DSC0005_Dexter%20Kim.png?rect=0,4,6166,4104&w=320&h=213&auto=format"
+                                    alt="">
+                                <p>THE COOKBOOK DUO</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -185,10 +249,24 @@
                     src="https://cdn.sanity.io/images/w8f1ak3c/production/06dac0cbccbec66e8c76afc0cc323e5241cc508b-3000x5000.png/Website%20Slider%20Slice%20Images%20(18).png?w=1600&h=2667&auto=format"
                     alt="">
                 <div data-scroll data-scroll-speed="-2" class="dets" id="dets3">
-                    <p>⚫️</p>
-                    <p id='shop'>SHOP
-                    <p id="details">SOAPS FOR HOPE </p>
-                    <p> > </p>
+                    <i class="ri-circle-fill"></i>
+                    <p>SHOP
+                    <p>SOAPS FOR HOPE </p>
+                    <i class="ri-arrow-right-s-line"></i>
+                    <div class="container" style="background-color: #fff;">
+                        <div class="listing">
+                            <div class="list-elem">
+                                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/63474079ab0c7723b75bd63b24d8bbc652349640-1408x1408.png/Cleanse%20&%20Nourish%20Hand%20Wash%20Two%20Good%20Co.png?w=320&h=320&auto=format"
+                                    alt="">
+                                <p>CLEANse & NOURISH HAND WASH</p>
+                            </div>
+                            <div class="list-elem">
+                                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/99866b12faf44f7490e6037dc197947334ce0a72-1408x1408.png/Nourish%20&%20Soothe%20Hand%20Lotion%20Two%20Good%20Co.png?w=320&h=320&auto=format"
+                                    alt="">
+                                <p>NOURISH & SOOTHE HAND LOTION</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
