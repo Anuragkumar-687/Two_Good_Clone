@@ -24,6 +24,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -77,7 +78,6 @@ body {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    /* Remove default underline */
 }
 
 .hover-line::after {
@@ -86,24 +86,19 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    /* Start the line from the left, full width */
     height: 1px;
-    /* Line thickness */
     background-color: #000000;
-    /* Line color */
     transform: scaleX(0);
-    /* Initially hide the line by scaling it horizontally to 0 */
     transform-origin: right center;
-    /* Set the transformation origin to the right */
     transition: transform 0.3s ease;
-    /* Smooth transition effect */
+
 }
 
 .hover-line:hover::after {
     transform: scaleX(1);
-    /* Expand the line from left to right */
+
     transform-origin: left center;
-    /* Set the origin to the left when hovering */
+
 }
 
 #icons {
@@ -232,6 +227,66 @@ hr {
 #dets3 {
     background-color: #FFFFFF;
 }
+.dets .container{
+    background-color: #f5dfcf;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 303px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+    padding-top: 50px;
+    z-index: -1;
+    transition: height 4s ease-in-out;
+    will-change: height;
+}
+
+#page2 .elem .dets .container .listing{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.container .listing .list-elem img{
+    height: 118px;
+    margin-top: 20px;
+    margin-bottom: 6px;
+
+}
+
+#duobook{
+    transform: scale(1.4);
+    margin-bottom: 41px;
+}
+
+.container .listing .list-elem p{
+    font-size: 12px;
+    margin: 10px 10px;
+    text-align: center;
+    
+}
+
+.elem .dets:hover .container{
+    height: auto ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #shop {
     font-size: 14px;
@@ -242,7 +297,7 @@ hr {
 }
 
 #page3 {
-    height: 120vh;
+    /* height: 120vh; */
     width: 100%;
     position: relative;
     display: flex;
@@ -314,144 +369,14 @@ hr {
     padding: 3vw 2vw;
 }
 
-@media (max-width:600px) {
-
-    #nav {
-        /* height: 100px; */
-        width: 100%;
-        /* background-color: burlywood; */
-        position: fixed;
-        z-index: 99;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 15px;
-    }
-
-    #nav #nav-part2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-    }
-
-    #links {
-        padding: 10px;
-        display: none;
-    }
-
-    #nav-part1 {
-        /* background-color: RED; */
-        height: 67px;
-        overflow: hidden;
-    }
-
-    #nav-part1 svg {
-        display: block;
-        height: 67px;
-        width: 80px;
-    }
-
-    #nav #twogoodlogo {
-        height: 40px;
-        margin-left: -20px;
-    }
-
-    #icons {
-        padding: 7px;
-        border-radius: 50px;
-        background-color: #F7F7F7;
-    }
-
-    #nav-part2 #icons i {
-        font-size: 15px;
-        margin: 0 20px;
-        font-weight: 100;
-    }
-
-    #page1 {
-        /* background-color: red; */
-        min-height: 70vh;
-        width: 100%;
-        padding: 0 3vw;
-        padding-top: 25vh;
-
-    }
-
-    #page1 h1 {
-        font-size: 15.5vw;
-        letter-spacing: -3px;
-    }
-
-    #img-container {
-        height: 25vh;
-        margin-top: 3vw;
-    }
 
 
-
-    #page2 {
-        min-height: 100vh;
-        width: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding: 5vw 3vw;
-        flex-direction: column;
-        justify-content: space-between;
-        /* background-color: red; */
-    }
-
-    #page2 .elem {
-        height: 95vh;
-        width: 100%;
-
-        overflow: hidden;
-        margin-bottom: 3vw;
-    }
-
-    #page2 .elem .dets {
-        height: 40px;
-        border-radius: 50px;
-        width: 70%;
-        position: absolute;
-        z-index: 9;
-        background-color: rgb(229, 156, 186);
-
-    }
-
-    #page3 {
-        min-height: 120vh;
-        width: 100%;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    .child {
-        height: 54vh;
-        width: 88vw;
-        position: relative;
-        padding: 15vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .child img {
-        height: 100%;
-    }
-
-}
 #twogood2{
     display: flex;
     margin-top: 40px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 .lastmessage{
     font-size: 20px;
@@ -463,4 +388,434 @@ hr {
 .copyrighttext{
     display: flex;
     gap: 30px;
+}
+
+
+
+@font-face {
+  font-family: Futura;
+  src: url(./Futura-Bold.ttf);
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(./Gilroy-Medium.ttf);
+}
+
+
+
+#full {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color:rgba(0, 0, 0);
+    /* top: 00vh; */
+    left:0;
+    top: -100vh;
+    padding: 0px 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    
+    
+}
+
+#full h4 {
+    font-size: 80px; 
+    color: white;
+    font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: -13px;
+}
+
+
+#full i{
+    position: absolute;
+    top:4%;
+    left:91%;
+    width:20%;
+    color:white;
+    font-size: 20px;
+    cursor:pointer;
+}
+#full2 {
+    height: 75vh;
+    width: 100vw;
+    position: absolute;
+    background-color:rgba(0, 0, 0);
+    left:0;
+    top: -75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+   
+    
+}
+
+#full2 h4 {
+    font-size: 80px; 
+    color: white;
+    font-family: "Futura Now Headline", "Lucida Sans", Tahoma, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: -13px;
+}
+
+#full2 i{
+    position: absolute;
+    top:4%;
+    left:91%;
+    width:20%;
+    color:white;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+
+.hover-line1 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none; 
+  }
+  
+  .hover-line1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; 
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: right center; 
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-line1:hover::after {
+    transform: scaleX(1); 
+    transform-origin: left center; 
+  }
+  
+  
+  #full, #full2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.marquee-container {
+
+    position: relative;
+    width: 100vw;
+    height: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .marquee {
+    position: absolute;
+    display: inline-block;
+    font-size: 80px;
+    font-weight:900;
+    color: white;
+    text-transform: uppercase;
+    font-family:'futura' ;
+  }
+  .marquee1 {
+    animation-name: scroll-left;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+  }
+  .marquee2 {
+    animation-name: scroll-right;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+  
+  }
+  .marquee-wrapper {
+    margin-top: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  #carthr{
+    width: 100vw;
+    margin: 10px auto 0 auto;
+    border: 0.5px solid white;
+  }
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+/* Mobile (max 580px) */
+@media (max-width: 580px) {
+    #nav {
+        padding: 8px;
+        align-items: flex-start;
+    }
+
+    #nav-part1 svg {
+        width: 15vw;
+    }
+    #links {
+        display: none;
+    }
+  
+  
+    #icons{
+        display: inline;
+    }
+
+
+    #nav #twogoodlogo {
+        height: 35px;
+        margin-left: 0;
+    }
+
+    #page1 {
+        padding-top: 10vh;
+        height: 25vh;
+    }
+
+    #page1 h1 {
+        font-size: 16vw;
+        letter-spacing: -1px;
+    }
+
+    #img-container {
+        height: 15vh;
+    }
+
+    #page2 {
+        display: flex;
+        flex-direction: column;
+        padding: 4vw 2vw;
+    }
+
+    #page2 .elem .dets {
+        height: 30px;
+        width: 35%;
+
+    }
+
+    #page2 .dets p {
+        font-size: 5px;
+    }
+
+    #page3 {
+        display: block;
+        padding: 3vw 2vw;
+    }
+
+    .child {
+        height: 40vh;
+        width: 75vw;
+        padding: 10vw;
+    }
+
+    .child img {
+        height: 100%;
+    }
+
+    #page4 h1 {
+        font-size: 14px;
+    }
+
+    #page4 p {
+        font-size: 6px;
+    }
+
+
+    #full h4,
+  #full2 h4 {
+    font-size: 30px;
+    text-align: right;
+  }
+
+  #full i,
+  #full2 i {
+    left: 88%;
+    font-size: 16px;
+  }
+
+  .marquee {
+    font-size: 40px;
+  }
+
+  .marquee-container {
+    height: 50px;
+  }
+
+  .marquee-wrapper {
+    margin-top: 200px;
+  }
+
+}
+
+/* Tablets (max 720px) */
+@media (max-width: 720px) {
+    
+
+    #nav-part1 {
+        width:25vw;
+    }
+    #links {
+        display: none;
+    }
+    #nav #twogoodlogo {
+        height: 38px;
+    }
+
+    #page1 {
+        height: 25vh;
+        padding-top: 10vh;
+    }
+
+    #page1 h1 {
+        font-size: 16px;
+    }
+
+    #img-container {
+        height: 18vh;
+    }
+
+    #page2 {
+        padding: 4vw 2vw;
+        flex-direction: column;
+    }
+
+    #page2 .elem {
+        width: 100vw;
+        height: 75vh;
+        margin-bottom: 4vw;
+    }
+
+    #page2 .dets p {
+        font-size: 16px;
+        padding: 4px;
+    }
+    
+
+    #page3 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .child {
+        height: 45vh;
+        width: 40vw;
+        padding: 4vw;
+    }
+
+    .child img {
+        height: 100%;
+    }
+    #full h4,
+  #full2 h4 {
+    font-size: 60px;
+  }
+
+  .marquee {
+    font-size: 60px;
+  }
+
+  .marquee-container {
+    height: 70px;
+  }
+
+  .marquee-wrapper {
+    margin-top: 300px;
+  }
+  #page4 h1 {
+    font-size: 30px;
+}
+
+#page4 p {
+    font-size: 14px;
+}
+   
+}
+
+@media (max-width: 1023px) {
+    #nav {
+        padding: 12px;
+    }
+
+    #nav-part1 svg {
+        width: 85px;
+    }
+#links{
+    display: none;
+}
+    #nav #twogoodlogo {
+        height: 45px;
+    }
+
+    #page1 {
+        padding-top: 10vh;
+        height: 35vh;
+    }
+
+    #page1 h1 {
+        font-size: 10vw;
+    }
+
+    #img-container {
+        height: 50vh;
+    }
+
+    #page2 {
+        flex-direction: column;
+        padding: 3vw 2vw;
+    }
+
+    #page2 .elem {
+        width: 100vw;
+
+        height: 75vh;
+        margin-bottom: 3vw;
+    }
+
+    #page2 .elem img {
+        height: 60vh;
+    }
+
+    #page2 .dets {
+        font-size: 20px;
+
+    }
+    #page2 .elem .dets {
+        height: 50px;
+        width: 40%;
+
+    }
+
+    #page3 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #page3 img {
+        width: 50vw;
+
+    }
 }
